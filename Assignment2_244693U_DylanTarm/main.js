@@ -169,6 +169,20 @@ kitsuneToggleBtn.addEventListener("click", function () {
   }
 });
 
+/*Jorōgumo*/
+const jorogumoToggleBtn = document.querySelector("#jorogumoToggleBtn");
+const jorogumoInfo = document.querySelector(".jorogumo-info");
+
+jorogumoToggleBtn.addEventListener("click", function () {
+  if (jorogumoInfo.style.display === "none") {
+    jorogumoInfo.style.display = "block";
+    jorogumoToggleBtn.innerText = "Hide Details";
+  } else {
+    jorogumoInfo.style.display = "none";
+    jorogumoToggleBtn.innerText = "Jorōgumo Details";
+  }
+});
+
 /*JS for hamMenu */
 const hamBtn = document.querySelector("#hamIcon");
 const menuItemsList = document.querySelector("nav ul");

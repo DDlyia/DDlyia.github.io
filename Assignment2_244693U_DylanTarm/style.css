@@ -138,6 +138,20 @@ padding: 7rem;}
   background-color: #d9bba5;
 }
 
+#jorogumoToggleBtn {
+  background-color: #e2cfc3;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#jorogumoToggleBtn:hover {
+  background-color: #d9bba5;
+}
+
 /*CSS for responsive menu*/
 #hamIcon{display:none;}
 @media (max-width:800px){
