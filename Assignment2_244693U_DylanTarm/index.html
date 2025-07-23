@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,13 @@
     <script src="main.js" defer></script>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
-  <nav>
-    <a href="index.html">Remember what you've learned</a>
-    <a href="game.html">Play Memory Match</a> | 
-    <a href="quiz.html">Take the Quiz</a>
-  </nav>
+<body class="wiki-body">
+  <!-- Navigation Links -->
+<nav class="yokai-nav">
+  <a href="index.html">Remember what you've learned</a>
+  <a href="game.html">Play Memory Match</a>
+  <a href="quiz.html">Take the Quiz</a>
+</nav>
     <header>
       <h1>Types of Yōkais</h1>
     </header>
@@ -27,9 +28,10 @@
     </ul>
   </nav>
   <main id="pagecontainer">
+    <!-- Wiki Page: Animal-Based -->
     <section class="page" id="page1">
-      <button id="kitsuneToggleBtn">Kitsune Details</button>
-      <div class="kitsune-info" style="display: none;">
+      <button class="toggle-btn" data-target=".kitsune-info">Show Kitsune Details</button>
+<div class="yokai-info kitsune-info hidden">
     <h2>Kitsune</h2>
     <img src="images/Kitsune.jpg" alt="Kitsune" class="yokai-img">
 
@@ -71,8 +73,8 @@
     <p>Mysterious illusory fires and strange lights in the sky are said to be caused by their magic, and are known as <strong>狐火</strong> kitsunebi, or “fox fire.”</p>
     </div>
 
-    <button id="jorogumoToggleBtn">Jorōgumo Details</button>
-    <div class="jorogumo-info" style="display: none;">
+    <button class="toggle-btn" data-target=".jorogumo-info">Show Jorōgumo Details</button>
+<div class="yokai-info jorogumo-info hidden">
       <h2>Jorōgumo</h2>
     <img src="images/Jorōgumo.jpg" alt="Jorōgumo" class="yokai-img">
 
@@ -81,47 +83,302 @@
     <p><strong>Diet:</strong> young, virile men</p>
     
     <h3>Appearances:</h3>
-    <p>
-      Foxes, or kitsune, are found all across Japan. 
-      They are identical to wild foxes found elsewhere in the world apart from their incredible magical powers. 
-      Their cute faces and small size make them particularly loved by most people.
-    </p>
+    <p>In Japan, some spiders are known to possess amazing supernatural powers. One of these is the <em>jorōgumo</em>, known as the golden orb-weaver in English.</p>
+
+    <p>The <em>jorōgumo</em> is the most well-known of the arachnid yōkai, and is found all over the Japanese archipelago except for the northern island of Hokkaidō.</p>
+
+    <p>Their body size averages between two to three centimeters long, but they can grow much larger; some are massive enough to catch and eat small birds.</p>
+
+    <p>Renowned for their size, their vividly beautiful colors, and the large and strong webs they weave, the beautiful <em>jorōgumo</em> are also famous for the cruel destruction they wreak on young men.</p>
+
+    <p>Written with modern kanji, their name means “entangling bride.” However, these characters were added much later to cover up the original meaning of <em>jorōgumo</em>—“whore spider.”</p>
+
 
     <h3>Behaviour:</h3>
-    <div>
-      <p>There are two major variations of Kitsune.</p>
-      <div>
-        <h3>Holy Foxes</h3>
-        <p>Holy foxes are servants of the Shinto deity Inari, and Inari's shrines are decorated with statues and images of these foxes.
-        </p>
-        <p>Legends tell of celestial foxes providing wisdom or service to good and pious humans.</p>
-        <p>These holy foxes act as messengers of the gods and mediums between the celestial and human worlds.
-        They often protect humans or places, provide good luck, and ward evil spirits away. </p>
-      </div>
-      <div>
-        <h3>Wild Foxes</h3>
-        <p>
-          Wild foxes are those which delight in mischief, pranks, or evil. 
-          There are stories in which wild foxes trick or even possess humans, and cause them to behave strangely. 
-          Despite this wicked nature, even wild foxes keep their promises, remember friendships, and repay any favors done for them.
-        </p>
-      </div>
-    </div>
+    <p>Jorōgumo live solitary lives, both as spiders and as yōkai.</p>
+    <p>When a golden orb-weaver reaches 400 years of age, it develops magical powers and begins to feed on human prey instead of insects.</p>
+    <p>Jorōgumo make their nests in caves, forests, or empty houses in towns.</p>
+    <p>Possessing a cunning intelligence and a cold heart, they see humans as nothing more than insects to feed on.</p>
+    <p>They are skillful deceivers and powerful shape-shifters, usually appearing as young, sexy, and stunningly beautiful women.</p>
 
     <h3>Interactions:</h3>
-    <p>Kitsunes vex their targets by creating phantom sounds and sights, stealing from them, or otherwise humiliating them publicly. </p>
-    <p>Certain mental disorders have been attributed to possession by kitsune (known as <strong>狐憑き</strong> kitsunetsuki).</p>
-    <p>Mysterious illusory fires and strange lights in the sky are said to be caused by their magic, and are known as <strong>狐火</strong> kitsunebi, or “fox fire.”</p>
+    <p>Jorōgumo's favorite prey are young, handsome men looking for love—or other favors.</p>
+    <p>When a jorōgumo spots a man she desires, she lures him into her home with promises of affection. He is never seen again.</p>
+    <p>Jorōgumo spin silk threads strong enough to ensnare a grown man so that he cannot escape.</p>
+    <p>They also have powerful venom that can slowly weaken a man day by day, allowing the spider to savor her victim's long and painful death.</p>
+    <p>Jorōgumo can control other, lesser spiders, even employing fire-breathing spiders to burn down the homes of any suspicious meddlers.</p>
+    <p>They are such skillful predators that a jorōgumo can operate like this for years and years, even in the middle of a busy city, piling up hundreds of desiccated skeletons of foolish young men.</p>
     </div>
+
+    <button class="toggle-btn" data-target=".kirin-info">Show Kirin Details</button>
+<div class="yokai-info kirin-info hidden">
+  <h2>Kirin</h2>
+  <img src="images/Kirin.jpg" alt="Kirin" class="yokai-img">
+
+  <p><strong>Translation:</strong> none; based on the Chinese name for the same creature</p>
+  <p><strong>Habitat:</strong> areas ruled by a wise and benevolent leader</p>
+  <p><strong>Diet:</strong> purely vegetarian; never harms another creature</p>
+  
+  <h3>Appearances:</h3>
+  <p>The kirin is one of the rarest, most awesome and powerful creatures ever known in East Asia. It is a regal animal, holy and highly revered.</p>
+  
+  <p>The kirin is often considered a god in its own right. Resembling a deer with scales like a dragon's covering its body, the kirin is a chimerical beast.</p>
+
+  <p>It has a tail like an ox and a flowing mane. Its body and mane are covered in brilliant, holy fire and its face is the picture of utter serenity.</p>
+
+  <h3>Behaviour:</h3>
+  <p>A gentle animal, the kirin never eats the flesh of other beings, and takes great care never to tread on any living thing, even insects.</p>
+  <p>When it walks, it does so without trampling a single blade of grass. Its beauty is only surpassed by its rarity; the unicorn-like kirin only appears during periods of world peace.</p>
+  <p>They are seen only in lands owned by wise and benevolent people and during the reigns of noble and enlightened rulers, where they herald a golden age.</p>
+  <p>Although kirin never harm good and pure souls, they are swift and fierce to attack if threatened, breathing holy fire from their mouths.</p>
+
+  <h3>Interactions:</h3>
+  <p>Because kirin are beasts of purity and goodness, they have been used in carvings and paintings as symbols of these virtues since early times.</p>
+  <p>They are also seen as symbols of justice and wisdom. Because of their holiness, images of kirin frequently adorn temples and shrines.</p>
+  <p>Omens of great luck and fortune, the appearance of a kirin is believed to be a sign of the arrival of a great leader or a wise man.</p>
+</div>
     </section>
+    <!-- Wiki Page: Ghostly Kinds -->
     <section class="page" id="page2">
-    page 2 content
+    <button class="toggle-btn" data-target=".bakekujira-info">Show Bakekujira Details</button>
+<div class="yokai-info bakekujira-info hidden">
+  <h2>Bakekujira</h2>
+  <img src="images/Bakekujira.jpg" alt="Bakekujira" class="yokai-img">
+
+  <p><strong>Translation:</strong> Ghost whale</p>
+  <p><strong>Alternate names:</strong> Hone Kujira (“Bone Whale”)</p>
+  <p><strong>Habitat:</strong> Sea of Japan, especially near coastal villages</p>
+  <p><strong>Diet:</strong> None</p>
+
+  <h3>Appearances:</h3>
+  <p>
+    Bakekujira are enormous whale skeletons that rise from the ocean depths during rainy nights. 
+    They are often accompanied by flocks of eerie birds and strange, unrecognizable sea creatures.
+  </p>
+
+  <h3>Behaviour:</h3>
+  <p>
+    These spectral whales are believed to be the vengeful spirits of whales slaughtered by humans. 
+    Their appearance is considered a dire omen, bringing curses such as famine, disease, and disaster to nearby villages.
+  </p>
+
+  <h3>Legends:</h3>
+  <p>
+    In one famous tale, villagers on the Shimane Peninsula mistook a ghost whale for a living one and attempted to hunt it. 
+    Their weapons passed harmlessly through the skeleton. As they realized the truth, the sea erupted with unnatural creatures, 
+    and the ghost vanished into the waves. Soon after, their village was struck by misfortune, believed to be the Bakekujira's curse.
+  </p>
+</div>
+<button class="toggle-btn" data-target=".honeonna-info">Show Hone Onna Details</button>
+<div class="yokai-info honeonna-info hidden">
+  <h2>Hone Onna</h2>
+  <img src="images/Honeonna.jpg" alt="Hone Onna" class="yokai-img">
+
+  <p><strong>Translation:</strong> Bone woman</p>
+  <p><strong>Habitat:</strong> Dark streets, alleys, graveyards</p>
+  <p><strong>Diet:</strong> None; sustains herself through intimacy and love</p>
+
+  <h3>Appearances:</h3>
+  <p>
+    Hone onna appear as beautiful young women, often indistinguishable from how they looked in life. 
+    However, beneath this illusion lies a decaying skeleton. Only those with strong faith or clarity of mind can see through the disguise.
+  </p>
+
+  <h3>Behaviour:</h3>
+  <p>
+    These spirits return from the grave, drawn by lingering love for their former partners. 
+    At night, they visit their lovers, believing themselves still alive. 
+    Their presence slowly drains the vitality of those they love, leaving the victim sick and weakened over time.
+  </p>
+
+  <h3>Interactions:</h3>
+  <p>
+    The ghost's visits continue unnoticed for days or weeks, until someone—often a friend or servant—realizes the truth. 
+    Spiritual wards and charms can repel her, but only if the house's master chooses to use them. 
+    Many victims, unable to resist the allure of lost love, ultimately welcome her back, even at the cost of their own life.
+  </p>
+
+  <h3>Legends:</h3>
+  <p>
+    The most well-known tale is that of Otsuyu from <em>Botan Dōrō</em> ("The Tale of the Peony Lantern"), 
+    a tragic ghost story adapted across Japanese theater and literature since the 17th century.
+  </p>
+</div>
+<button class="toggle-btn" data-target=".hitodama-info">Show Hitodama Details</button>
+<div class="yokai-info hitodama-info hidden">
+  <h2>Hitodama</h2>
+  <img src="images/hitodama.jpg" alt="Hitodama" class="yokai-img">
+
+  <p><strong>Translation:</strong> Human soul</p>
+  <p><strong>Habitat:</strong> Graveyards, funeral homes, places of recent death</p>
+  <p><strong>Diet:</strong> None</p>
+
+  <h3>Appearances:</h3>
+  <p>
+    Hitodama appear as glowing orbs—red, orange, or blue-white—floating silently a few feet above the ground. 
+    They leave faint trails of light behind them, which helps distinguish them from other ghostly fireballs.
+  </p>
+
+  <h3>Behaviour:</h3>
+  <p>
+    These spirits are usually seen just before or after someone dies, as the soul leaves the body. 
+    They drift quietly through the air and are most commonly spotted at night in summer. 
+    Occasionally, they also appear during fainting episodes, only to return when the person revives.
+  </p>
+
+  <p>
+    Though eerie, hitodama are harmless. They should not be mistaken for more dangerous fireball yōkai.
+  </p>
+</div>
     </section>
+    <!-- Wiki Page: Demonic Beings -->
     <section class="page" id="page3">
-    page 3 content
+    <button class="toggle-btn" data-target=".shuten-doji-info">Show Shuten Dōji Details</button>
+<div class="yokai-info shuten-doji-info hidden">
+  <h2>Shuten Dōji</h2>
+  <img src="images/Shutendōji.jpg" alt="Shuten Dōji" class="yokai-img">
+
+  <p><strong>Translation:</strong> “Little Drunkard”</p>
+  <p><strong>Habitat:</strong> Mount Ōe, near Kyoto</p>
+  <p><strong>Diet:</strong> Human flesh and blood</p>
+
+  <h3>Legend:</h3>
+  <p>
+    Once a gifted human child born of a dragon and a mortal woman, Shuten Dōji was feared for his strength and intellect. 
+    Mocked as a demon child, abandoned by his mother, and shunned by others, he turned bitter and took to drink—earning the nickname “Shuten Dōji.”
+  </p>
+
+  <p>
+    During a drunken prank, an oni mask fused to his face. Ashamed, he fled into the mountains where he grew in strength and dark magical power. 
+    Gathering outcasts and yokai, he became the king of the oni, preying on Kyoto and abducting noblewomen to feast on in his castle on Mount Ōe.
+  </p>
+
+  <p>
+    His reign ended when the hero Minamoto no Yorimitsu tricked him with poisoned sake and beheaded him. 
+    Even decapitated, Shuten Dōji’s head tried to bite Yorimitsu, and had to be buried far from the capital.
+  </p>
+</div>
+<button class="toggle-btn" data-target=".sutoku-info">Show Sutoku Tennō Details</button>
+<div class="yokai-info sutoku-info hidden">
+  <h2>Sutoku Tennō</h2>
+  <img src="images/SutokuTennō.jpg" alt="Sutoku Tennō" class="yokai-img">
+
+  <p><strong>Translation:</strong> Emperor Sutoku</p>
+  <p><strong>Habitat:</strong> Sanuki Province (in exile), later Kyoto (as a spirit)</p>
+  <p><strong>Type:</strong> Onryō or Tengu (vengeful spirit)</p>
+
+  <h3>Legend:</h3>
+  <p>
+    Sutoku Tennō was once emperor of Japan, but was tricked into retiring by Emperor Toba and later betrayed by the court. 
+    His attempt to restore his family's honor led to the Hōgen Rebellion, which ended in defeat and exile.
+  </p>
+
+  <p>
+    In exile, he became a monk, but his holy texts—rumored to be written in blood—were rejected by the court. 
+    He died full of rage in 1164, and strange events followed: his body did not decay, blood seeped from the earth, and natural disasters plagued Kyoto.
+  </p>
+
+  <p>
+    For centuries, Sutoku's vengeance was blamed for civil unrest, imperial decline, and war. 
+    Though later enshrined as a kami, his curse is still feared today.
+  </p>
+</div>
+<button class="toggle-btn" data-target=".tatarigami-info">Show Tatarigami Details</button>
+<div class="yokai-info tatarigami-info hidden">
+  <h2>Tatarigami</h2>
+  <img src="images/Tatarigami.jpg" alt="Tatarigami" class="yokai-img">
+
+  <p><strong>Translation:</strong> Curse god / Curse spirit</p>
+  <p><strong>Habitat:</strong> Varies; often tied to historical sites or shrines</p>
+  <p><strong>Diet:</strong> Vengeance</p>
+
+  <h3>Appearance:</h3>
+  <p>
+    Tatarigami are powerful spirits or deified ghosts that bring calamity—plagues, war, famine, and disasters. They include gods like Emperor Gozu and Yamata no Orochi, as well as wrathful onryō like Sutoku Tennō and Taira no Masakado.
+  </p>
+
+  <h3>Behavior:</h3>
+  <p>
+    These spirits curse those who wronged them. To prevent disaster, they are worshipped in shrines. One example is the Gion Matsuri in Kyōto, originally held to appease Susanoo and Emperor Gozu during outbreaks of disease.
+  </p>
+
+  <p>
+    Appeasing tatarigami was a key duty of the onmyōji, and belief in them helped solidify the power of onmyōdō in Japan's spiritual and political life.
+  </p>
+</div>
     </section>
+    <!-- Wiki Page: Tsukumogami -->
     <section class="page" id="page4">
-    page 4 content
+    <button class="toggle-btn" data-target=".shogoro-info">Show Shōgorō Details</button>
+<div class="yokai-info shogoro-info hidden">
+  <h2>Shōgorō</h2>
+  <img src="images/Shōgorō.jpg" alt="Shōgorō" class="yokai-img">
+
+  <p><strong>Translation:</strong> "Gong-goro" or "ghost gong"</p>
+  <p><strong>Habitat:</strong> Buddhist temples, household storage</p>
+  <p><strong>Diet:</strong> none</p>
+
+  <h3>Appearance:</h3>
+  <p>
+    A shōgorō is a tsukumogami—a spirit inhabiting a worn-out shōgo, a small metal gong used in Buddhist services. When forgotten and left unused, it awakens as a yokai.
+  </p>
+
+  <h3>Behavior:</h3>
+  <p>
+    Shōgorō are harmless but can be startling. At night, they wander while striking their bodies like a metal turtle, creating eerie gong sounds that may disturb sleep.
+  </p>
+
+  <h3>Origin:</h3>
+  <p>
+    The name is a pun combining "shōgo" (gong) and "gorō," a common male name suffix. It can also be read as "shōgo" plus "goryō," a noble ghost type, linking it to aristocratic spirits.
+  </p>
+
+  <h3>Legend:</h3>
+  <p>
+    In 18th-century Osaka, wealthy merchant Yodoya Tatsugorō lost everything to the bakufu, including his prized golden chicken. His restless spirit mistakenly attached to a nearby gong (shōgo) instead of the chicken, transforming the instrument into a tsukumogami.
+  </p>
+</div>
+<button class="toggle-btn" data-target=".karakasa-info">Show Karakasa kozō Details</button>
+<div class="yokai-info karakasa-info hidden">
+  <h2>Karakasa kozō</h2>
+  <img src="images/Karakasakozō.jpg" alt="Karakasa kozō" class="yokai-img">
+
+  <p><strong>Translation:</strong> paper umbrella priest boy</p>
+  <p><strong>Alternate names:</strong> kasa obake, karakasa obake</p>
+  <p><strong>Diet:</strong> none</p>
+
+  <h3>Appearance:</h3>
+  <p>
+    These playful yōkai are transformations of Chinese-style oiled-paper umbrellas. They have one large eye, a long protruding tongue, and hop around on one or two legs.
+  </p>
+
+  <h3>Behavior:</h3>
+  <p>
+    Karakasa kozō are mischievous rather than dangerous. They surprise people by sneaking up and giving a big, oily lick with their tongues. Though startling, they are harmless. 
+  </p>
+  <p>
+    Caution is advised as other umbrella tsukumogami can be harmful and should not be confused with the karakasa kozō.
+  </p>
+</div>
+<button class="toggle-btn" data-target=".oi-info">Show Oi no Bakemono Details</button>
+<div class="yokai-info oi-info hidden">
+  <h2>Oi no Bakemono</h2>
+  <img src="images/Oinobakemono.jpg" alt="Oi no Bakemono" class="yokai-img">
+
+  <p><strong>Translation:</strong> backpack monster</p>
+  <p><strong>Habitat:</strong> homes and temples where pilgrims might stay</p>
+  <p><strong>Diet:</strong> none</p>
+
+  <h3>Appearance:</h3>
+  <p>
+    Oi no bakemono are tsukumogami—spirits inhabiting old wooden backpacks called oi. They resemble birds with long black hair sprouting from their heads, three-toed avian feet, and carry a broken sword blade in their mouths that looks like a pointed beak. They can breathe fire.
+  </p>
+
+  <h3>Origin:</h3>
+  <p>
+    Oi are special backpacks used by Buddhist monks, pilgrims, and yamabushi during long journeys, carrying religious implements and necessities. The oi no bakemono is said to appear in the book <em>Ehon musha bikō</em>, where one haunted the bedroom of Ashikaga Tadayoshi, a 14th-century general and government official.
+  </p>
+</div>
     </section>
   </main>
 

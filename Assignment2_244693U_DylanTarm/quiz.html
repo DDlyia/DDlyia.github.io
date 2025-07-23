@@ -4,44 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yōkai Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">  
+  <script src="main.js" defer></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Remember what you've learned</a>
-    <a href="game.html">Play Memory Match</a> | 
-    <a href="quiz.html">Take the Quiz</a>
-  </nav>
+<body class="Quiz-body">
+<nav class="yokai-nav">
+  <a href="index.html">Remember what you've learned</a>
+  <a href="game.html">Play Memory Match</a>
+  <a href="quiz.html">Take the Quiz</a>
+</nav>
 
-  <h1>Yōkai Quiz</h1>
-
-  <fieldset>
-    <legend>1. Which Yōkai is known as a mystical fox with shapeshifting abilities?</legend>
-    <input type="radio" id="q1a1" name="q1" value="Kitsune"><label for="q1a1">Kitsune</label><br>
-    <input type="radio" id="q1a2" name="q1" value="Tanuki"><label for="q1a2">Tanuki</label><br>
-    <input type="radio" id="q1a3" name="q1" value="Oni"><label for="q1a3">Oni</label><br>
-    <input type="radio" id="q1a4" name="q1" value="Noppera-bō"><label for="q1a4">Noppera-bō</label><br>
-  </fieldset>
-
-  <fieldset>
-    <legend>2. Which Yōkai is a playful spirit known for trickery and fun?</legend>
-    <input type="radio" id="q2a1" name="q2" value="Kitsune"><label for="q2a1">Kitsune</label><br>
-    <input type="radio" id="q2a2" name="q2" value="Tanuki"><label for="q2a2">Tanuki</label><br>
-    <input type="radio" id="q2a3" name="q2" value="Oni"><label for="q2a3">Oni</label><br>
-    <input type="radio" id="q2a4" name="q2" value="Noppera-bō"><label for="q2a4">Noppera-bō</label><br>
-  </fieldset>
-
-  <fieldset>
-    <legend>3. Which Yōkai is a ghost with no face?</legend>
-    <input type="radio" id="q3a1" name="q3" value="Kitsune"><label for="q3a1">Kitsune</label><br>
-    <input type="radio" id="q3a2" name="q3" value="Tanuki"><label for="q3a2">Tanuki</label><br>
-    <input type="radio" id="q3a3" name="q3" value="Oni"><label for="q3a3">Oni</label><br>
-    <input type="radio" id="q3a4" name="q3" value="Noppera-bō"><label for="q3a4">Noppera-bō</label><br>
-  </fieldset>
-
-  <button id="btnSubmit">Submit Quiz</button>
-  <h3 id="scorebox">Not submitted</h3>
-
-  <script src="main.js"></script>
-</body>
+<h1>Yōkai Quiz</h1>
+<select id="difficulty">
+  <option value="easy">Easy</option>
+  <option value="medium" selected>Medium</option>
+  <option value="hard">Hard</option>
+</select>
+<div id="quiz-container"></div>
+<button id="btnSubmit">Submit Quiz</button>
+<h3 id="scorebox">Not submitted</h3>
 </html>

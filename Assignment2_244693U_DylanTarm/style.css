@@ -1,181 +1,274 @@
+/* ----- Base & Body ----- */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f0dc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and readable font */
+  background-color: #f8f0dc;  /* Parchment-like light background */
+  color: #4b2e2e;             /* Dark warm brown text */
   text-align: center;
   padding: 20px;
+  margin: 0;
+  min-height: 100vh; /* Full height view */
+}
+
+/* Backgrounds specific to each page */
+.wiki-body{
+  background-image: url("images/WikiBG.jpg");
+  background-size: 750px 750px;
+}
+.Game-body{
+  background-image: url("images/GameBG.jpg");
+  background-size: 1450px;
+}
+.Quiz-body{
+  background-image: url("images/QuizBG.jpg");
+  background-size: 1450px;
+  color: #ffffff; /* Light text for dark background */
+}
+
+/* ----- Headings ----- */
+h1, h2, h3 {
+  font-family: 'Georgia', serif; /* Traditional style headings */
+  color: #4b2e2e;
+  margin-top: 1.2em;
 }
 
 h1 {
-  color: #4b2e2e;
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-gap: 15px;
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #c98a4f; /* Subtle gold underline */
+  padding-bottom: 0.3em;
+  margin-bottom: 0.7em;
+}
+
+/* ----- Navigation ----- */
+.yokai-nav {
+  background-color: #1e1e2f; /* Dark navy */
+  padding: 12px 24px;
+  display: flex;
+  gap: 24px;
+  font-family: 'Kosugi Maru', sans-serif; /* Stylized Japanese font */
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(50, 50, 80, 0.85);
   justify-content: center;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  user-select: none;
 }
 
+.yokai-nav a {
+  color: #f0e9db; /* Parchment color */
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.yokai-nav a:hover,
+.yokai-nav a:focus {
+  background-color: #c98a4f; /* Warm gold */
+  color: #1e1e2f;
+  border-color: #f0e9db;
+  cursor: pointer;
+}
+
+.yokai-nav a:not(:last-child)::after {
+  content: " |"; /* Separator */
+  color: #f0e9db;
+  padding-left: 10px;
+  user-select: none;
+}
+
+/* ----- Responsive Nav ----- */
+#hamIcon {
+  display: none; /* Hidden until in mobile view */
+}
+
+@media (max-width: 800px) {
+  .yokai-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  #hamIcon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #f0e9db;
+  }
+  .menuShow {
+    display: flex !important;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .yokai-nav a:not(:last-child)::after {
+    content: ""; /* No separator in mobile view */
+    padding: 0;
+  }
+}
+
+/* ----- Game Board Layout ----- */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 cards per row */
+  gap: 18px;
+  max-width: 720px;
+  margin: 20px auto;
+  justify-items: center;
+}
+
+/* ----- Card Styles ----- */
 .card {
   width: 100px;
-  height: 100px;
-  background-color: #d8c3a5;
-  border: 2px solid #a47148;
-  border-radius: 10px;
+  height: 140px;
+  perspective: 1000px; /* Enables 3D flip effect */
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.4s;
+  border: 2px solid #a47148;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  background-color: #d8c3a5;
 }
 
 .card.flipped {
-  transform: rotateY(180deg);
+  animation: flipCard 0.4s ease forwards; /* Animation when flipped */
 }
 
-.card .front, .card .back {
+@keyframes flipCard {
+  from { transform: rotateY(0); }
+  to { transform: rotateY(180deg); }
+}
+
+.card .front,
+.card .back {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card .front {
-  background-color: #b08968;
+  background-color: #b08968; /* Front face style */
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
 }
 
 .card .back {
-  transform: rotateY(180deg);
-  background-color: #fff;
+  background-color: white;
+  transform: rotateY(180deg); /* Back face is flipped */
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
 }
 
 .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
   border-radius: 10px;
+  user-select: none;
 }
 
+@media (max-width: 800px) {
+  #game-board {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on small screens */
+  }
+}
+
+/* ----- Info Box ----- */
 .info {
   background: #fffbe6;
-  padding: 15px;
-  margin-top: 25px;
+  padding: 20px 25px;
+  margin-top: 30px;
   border: 2px solid #d8a55d;
-  border-radius: 10px;
-  width: 300px;
+  border-radius: 12px;
+  max-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 2px 8px rgba(216, 165, 93, 0.6);
+  text-align: left;
+  font-family: 'Georgia', serif;
+  color: #4b2e2e;
+  line-height: 1.5;
 }
 
-.hidden {
-  display: none;
-}
-
-.restart {
-  margin-top: 20px;
-  padding: 10px 20px;
+/* ----- Buttons ----- */
+button, .restart {
   background-color: #e3c5a5;
   border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 1.1rem;
   cursor: pointer;
-  border-radius: 5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #4b2e2e;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0,0,0,0.12);
+  margin: 15px auto;
+  display: block;
 }
 
-/*wiki.html*/
+button:hover, .restart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+/* ----- Wiki Pages ----- */
 .page {
   background-color: #f8f0dc;
-  color: #333;
-  padding: 20px;
+  color: #4b2e2e;
+  padding: 30px 40px;
   font-family: "Georgia", serif;
-  line-height: 1.6;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  line-height: 1.65;
+  max-width: 1000px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.12);
+  text-align: left;
+  position: relative;
 }
+
 .yokai-img {
   float: right;
-  margin-left: 20px;
-  width: 250px;
+  margin-left: 25px;
+  width: 280px;
+  max-width: 40%;
   height: auto;
   border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
+
 .page h2 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
+  font-size: 2.4rem;
+  margin-bottom: 0.3em;
 }
+
 .page h3 {
-  margin-top: 1.5em;
-  font-size: 1.3em;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-}
-nav ul li{display:inline;}
-#page1{background-color: #c46c32; 
-color: #fff;
-padding: 7rem;}
-#page2{background-color: #6d8a96; 
-color: #fff;
-padding: 7rem;}
-#page3{background-color: #8c2e2e;
-color: #fff;
-padding: 7rem;}
-#page4{background-color: #72667c; 
-color: #fff;
-padding: 7rem;}
-
-#kitsuneToggleBtn {
-  background-color: #e2cfc3;
-  border: none;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  margin-top: 2em;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #c98a4f;
+  padding-bottom: 5px;
 }
 
-#kitsuneToggleBtn:hover {
-  background-color: #d9bba5;
-}
+/* ----- Section color backgrounds ----- */
+#page1 {background-color: #c46c32; color: #fff; padding: 5rem;}
+#page2 {background-color: #6d8a96; color: #fff; padding: 5rem;}
+#page3 {background-color: #8c2e2e; color: #fff; padding: 5rem;}
+#page4 {background-color: #72667c; color: #fff; padding: 5rem;}
 
-#jorogumoToggleBtn {
-  background-color: #e2cfc3;
-  border: none;
-  padding: 10px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-#jorogumoToggleBtn:hover {
-  background-color: #d9bba5;
-}
-
-/*CSS for responsive menu*/
-#hamIcon{display:none;}
-@media (max-width:800px){
-/*make a menu items vertical*/
-nav ul li{display:block;}
-/* unhide menu icon */
-#hamIcon{display:block;}
-/*hide the menu item list*/
-nav ul{display:none;}
-}
-/*to unhide menu items*/
-.menuShow{display:block;}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 12px;
-  font-size: 1em;
-  cursor: pointer;
-  margin: 5px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+/* ----- Utility ----- */
+.hidden {
+  display: none; /* Utility class to hide elements */
 }

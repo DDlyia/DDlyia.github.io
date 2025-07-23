@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yōkai Memory Match</title>
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Remember what you've learned</a>
-    <a href="game.html">Play Memory Match</a> | 
-    <a href="quiz.html">Take the Quiz</a>
-  </nav>
+<body class="Game-body">
+<nav class="yokai-nav">
+  <a href="index.html">Remember what you've learned</a>
+  <a href="game.html">Play Memory Match</a>
+  <a href="quiz.html">Take the Quiz</a>
+</nav>
+
   
   <h1>🧠 Yōkai Memory Match</h1>
-  <p>Match all the cards to reveal their secrets!</p>
+  <h3>Match all the cards to reveal their secrets!</h3>
   <div id="game-board" class="grid"></div>
 
   <div id="yokai-info" class="info hidden"></div>
 
-  <button onclick="startGame()" class="restart">Restart Game</button>
+<button onclick="resetGame()" class="restart">Restart Game</button>
+
 </body>
 </html>
