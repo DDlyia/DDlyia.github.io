@@ -112,6 +112,7 @@ h3 {
     content: ""; /* No separator in mobile view */
     padding: 0;
   }
+  #qrCodeImg{display:none;} /*hide QRcode when its mobile size */
 }
 
 /* ----- Game Board Layout ----- */
