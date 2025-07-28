@@ -173,15 +173,15 @@ function startGame() {
 
   // List of yokai for matching game
   const yokaiPool = [
-    ["Kitsune", "images/kitsune.jpg", "A mystical fox with shapeshifting abilities."],
+    ["Kitsune", "images/Kitsune.jpg", "A mystical fox with shapeshifting abilities."],
     ["Jorogumo", "images/Jorōgumo.jpg", "Spider-woman who lures victims."],
-    ["Kirin", "images/kirin.jpg", "A peaceful and divine beast."],
-    ["Bake Kujira", "images/bakekujira.jpg", "A ghostly whale with a cursed legend."],
+    ["Kirin", "images/Kirin.jpg", "A peaceful and divine beast."],
+    ["Bake Kujira", "images/Bakekujira.jpg", "A ghostly whale with a cursed legend."],
     ["Hone Onna", "images/Honeonna.jpg", "A beautiful woman revealed to be skeletal."],
     ["Hitodama", "images/hitodama.jpg", "Floating soul flames."],
     ["Shuten Dōji", "images/Shutendōji.jpg", "Demon leader with fearsome strength."],
     ["Sutoku Tennō", "images/SutokuTennō.jpg", "Emperor turned vengeful spirit."],
-    ["Tatarigami", "images/tatarigami.jpg", "God of curses and disasters."],
+    ["Tatarigami", "images/Tatarigami.jpg", "God of curses and disasters."],
     ["Shogoro", "images/Shōgorō.jpg", "Playful old spirit who tricks villagers."],
     ["Karakasa Kozō", "images/Karakasakozō.jpg", "Umbrella spirit who hops on one leg."],
     ["Oi no Bakemono", "images/Oinobakemono.jpg", "Aged yokai full of wisdom and mystery."]
