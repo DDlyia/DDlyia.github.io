@@ -153,7 +153,7 @@ function createCard(name, imageSrc, description) {
 
   cardDiv.innerHTML = `
     <div class="front"></div>
-    <div class="back"><img src="${imageSrc}" alt="${name}"></div>
+    <div class="back"><img src=${imageSrc} alt="${name}"></div>
   `;
 
   cardDiv.onclick = () => flipCard(cardDiv);
@@ -177,21 +177,29 @@ function startGame() {
     ["Jorogumo", "images/Jorōgumo.jpg", "Spider-woman who lures victims."],
     ["Kirin", "images/kirin.jpg", "A peaceful and divine beast."],
     ["Bake Kujira", "images/bakekujira.jpg", "A ghostly whale with a cursed legend."],
-    ["Hone Onna", "images/Hone onna.jpg", "A beautiful woman revealed to be skeletal."],
+    ["Hone Onna", "images/Honeonna.jpg", "A beautiful woman revealed to be skeletal."],
     ["Hitodama", "images/hitodama.jpg", "Floating soul flames."],
-    ["Shuten Dōji", "images/Shuten dōji.jpg", "Demon leader with fearsome strength."],
-    ["Sutoku Tennō", "images/Sutoku Tennō.jpg", "Emperor turned vengeful spirit."],
+    ["Shuten Dōji", "images/Shutendōji.jpg", "Demon leader with fearsome strength."],
+    ["Sutoku Tennō", "images/SutokuTennō.jpg", "Emperor turned vengeful spirit."],
     ["Tatarigami", "images/tatarigami.jpg", "God of curses and disasters."],
     ["Shogoro", "images/Shōgorō.jpg", "Playful old spirit who tricks villagers."],
-    ["Karakasa Kozō", "images/Karakasa kozō.jpg", "Umbrella spirit who hops on one leg."],
-    ["Oi no Bakemono", "images/Oi no bakemono.jpg", "Aged yokai full of wisdom and mystery."]
+    ["Karakasa Kozō", "images/Karakasakozō.jpg", "Umbrella spirit who hops on one leg."],
+    ["Oi no Bakemono", "images/Oinobakemono.jpg", "Aged yokai full of wisdom and mystery."]
   ];
 
   // Choose number of pairs based on level
   const numPairs = level === 1 ? 4 : level === 2 ? 8 : 12;
   totalMatches = numPairs;
 
-  const selectedYokai = yokaiPool.slice(0, numPairs);
+  // Clone and shuffle the yokai pool
+  const shuffledPool = [...yokaiPool];
+  for (let i = shuffledPool.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [shuffledPool[i], shuffledPool[j]] = [shuffledPool[j], shuffledPool[i]];
+  }
+
+  const selectedYokai = shuffledPool.slice(0, numPairs);
+
   const cardElements = [];
 
   // Create pairs of cards

@@ -89,7 +89,7 @@ h3 {
 
 /* ----- Responsive Nav ----- */
 #hamIcon {
-  display: none; /* Hidden until in mobile view */
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -102,6 +102,12 @@ h3 {
     cursor: pointer;
     font-size: 1.6rem;
     color: #f0e9db;
+  }
+  nav ul {
+    display: none; /* Hidden until toggled */
+  }
+  nav ul.menuShow {
+    display: block;
   }
   .menuShow {
     display: flex !important;
